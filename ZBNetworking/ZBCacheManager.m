@@ -24,8 +24,7 @@
 NSString *const zb_PathSpace =@"ZBKit";
 NSString *const zb_defaultCachePathName =@"AppCache";
 static const NSInteger zb_defaultCacheMaxCacheAge  = 60*60*24*7;
-//static const NSInteger defaultCacheMixCacheAge = 60;
-static const CGFloat unit = 1000.0;
+static const CGFloat unit = 1024.0;
 @interface ZBCacheManager ()
 @property (nonatomic ,strong) NSCache *memoryCache;
 @property (nonatomic ,copy)NSString *diskCachePath;

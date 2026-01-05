@@ -35,6 +35,7 @@
 		9F9E6729255A36AB003CEB7E /* PlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F9E6728255A36AB003CEB7E /* PlayerViewController.m */; };
 		9FB4A67F28A5EB9E00FEDB3F /* NSString+ZBURLEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FB4A67E28A5EB9D00FEDB3F /* NSString+ZBURLEncoding.m */; };
 		9FB4BB3823D4658E0013EA17 /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FB4BB3723D4658E0013EA17 /* DataManager.m */; };
+		9FCA9C332F0BB6AA0009F2D4 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FCA9C322F0BB6AA0009F2D4 /* SceneDelegate.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +112,8 @@
 		9FB4A67E28A5EB9D00FEDB3F /* NSString+ZBURLEncoding.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+ZBURLEncoding.m"; sourceTree = "<group>"; };
 		9FB4BB3623D4658E0013EA17 /* DataManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataManager.h; sourceTree = "<group>"; };
 		9FB4BB3723D4658E0013EA17 /* DataManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataManager.m; sourceTree = "<group>"; };
+		9FCA9C312F0BB6AA0009F2D4 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		9FCA9C322F0BB6AA0009F2D4 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
 		C572061DEBB8B1709A68AEA1 /* Pods-ZBNetworkingDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZBNetworkingDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZBNetworkingDemo/Pods-ZBNetworkingDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		FC7D594D1C3900452288F761 /* libPods-ZBNetworkingDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ZBNetworkingDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -214,6 +217,8 @@
 				7DF826801D58170C000D1109 /* RootViewController.m */,
 				7DF826331D5815BE000D1109 /* AppDelegate.h */,
 				7DF826341D5815BE000D1109 /* AppDelegate.m */,
+				9FCA9C312F0BB6AA0009F2D4 /* SceneDelegate.h */,
+				9FCA9C322F0BB6AA0009F2D4 /* SceneDelegate.m */,
 				7DF826361D5815BE000D1109 /* ViewController.h */,
 				7DF826371D5815BE000D1109 /* ViewController.m */,
 				9F94958D27912C98002D8CAB /* APMModel.h */,
@@ -483,6 +488,7 @@
 				9F244A502170D53700482E41 /* MethodViewController.m in Sources */,
 				7DD0B4381E65629500E5634E /* ZBCacheManager.m in Sources */,
 				7DF826321D5815BE000D1109 /* main.m in Sources */,
+				9FCA9C332F0BB6AA0009F2D4 /* SceneDelegate.m in Sources */,
 				9F94958F27912C98002D8CAB /* APMModel.m in Sources */,
 				7D10B4601F45543E00E87520 /* ZBRequestManager.m in Sources */,
 				7D4C69CD1D6D888C006CCE4C /* HomeViewController.m in Sources */,
@@ -633,6 +639,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = E6LU458855;
 				INFOPLIST_FILE = ZBNetworkingDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MARKETING_VERSION = 1.2.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "github.com-Suzhibin.ZBNetworkingDemo";
@@ -648,6 +655,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = E6LU458855;
 				INFOPLIST_FILE = ZBNetworkingDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MARKETING_VERSION = 1.2.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "github.com-Suzhibin.ZBNetworkingDemo";

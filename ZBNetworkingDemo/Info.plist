@@ -46,5 +46,25 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+    <key>UIApplicationSceneManifest</key>
+    <dict>
+        <!-- 单窗口App设为false，多窗口（iPad）设为true -->
+        <key>UIApplicationSupportsMultipleScenes</key>
+        <false/>
+        <key>UISceneConfigurations</key>
+        <dict>
+            <key>UIWindowSceneSessionRoleApplication</key>
+            <array>
+                <dict>
+                    <!-- 配置名称，可自定义 -->
+                    <key>UISceneConfigurationName</key>
+                    <string>Default Configuration</string>
+                    <!-- 指定SceneDelegate类名（必须和你创建的类一致） -->
+                    <key>UISceneDelegateClassName</key>
+                    <string>SceneDelegate</string>
+                </dict>
+            </array>
+        </dict>
+    </dict>
 </dict>
 </plist>

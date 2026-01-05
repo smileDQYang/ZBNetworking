@@ -65,9 +65,8 @@ static const NSInteger cacheTime = 15;//过期时间
         CGFloat cacheSize=[[ZBCacheManager sharedInstance]getCacheSize];//json缓存文件大小
         CGFloat imageSize = [[SDImageCache sharedImageCache]totalDiskSize];//图片缓存大小
         CGFloat AppCacheSize=cacheSize+imageSize;
-        AppCacheSize=AppCacheSize/1000.0/1000.0;
         
-        cell.detailTextLabel.text=[NSString stringWithFormat:@"%.2fM",AppCacheSize];
+        cell.detailTextLabel.text=[NSString stringWithFormat:@"%@",[[ZBCacheManager sharedInstance] fileUnitWithSize:AppCacheSize]];
         cell.accessoryType=UITableViewCellAccessoryDisclosureIndicator;
     }
     if (indexPath.row==1) {
@@ -83,12 +82,8 @@ static const NSInteger cacheTime = 15;//过期时间
 
     if (indexPath.row==2) {
         cell.textLabel.text=@"清除json缓存";
-        
-        CGFloat cacheSize=[[ZBCacheManager sharedInstance]getCacheSize];//json缓存文件大小
-    
-        cacheSize=cacheSize/1000.0/1000.0;
         CGFloat size=[[ZBCacheManager sharedInstance]getCacheSize];//json缓存文件大小
-        cell.detailTextLabel.text=[NSString stringWithFormat:@"%.2fM(%@)",cacheSize,[[ZBCacheManager sharedInstance] fileUnitWithSize:size]];
+        cell.detailTextLabel.text=[NSString stringWithFormat:@"%@",[[ZBCacheManager sharedInstance] fileUnitWithSize:size]];
         cell.accessoryType=UITableViewCellAccessoryDisclosureIndicator;
     }
     
@@ -104,11 +99,8 @@ static const NSInteger cacheTime = 15;//过期时间
     
     if (indexPath.row==4) {
         cell.textLabel.text=@"清除图片缓存方法";
-         CGFloat imageSize = [[SDImageCache sharedImageCache]totalDiskSize];//图片缓存大小
-        
-         imageSize=imageSize/1000.0/1000.0;
-        
-         cell.detailTextLabel.text=[NSString stringWithFormat:@"%.2fM",imageSize];
+        CGFloat imageSize = [[SDImageCache sharedImageCache]totalDiskSize];//图片缓存大小
+        cell.detailTextLabel.text=[NSString stringWithFormat:@"%@",[[ZBCacheManager sharedInstance] fileUnitWithSize:imageSize]];
         cell.accessoryType=UITableViewCellAccessoryDisclosureIndicator;
     }
     
@@ -124,15 +116,10 @@ static const NSInteger cacheTime = 15;//过期时间
     
     if (indexPath.row==6) {
         cell.textLabel.text=@"清除自定义路径缓存";
-    
-        CGFloat cacheSize=[[ZBCacheManager sharedInstance]getFileSizeWithPath:self.imagePath];
-        
-        cacheSize=cacheSize/1000.0/1000.0;
-        
-        CGFloat size=[[ZBCacheManager sharedInstance]getFileSizeWithPath:self.imagePath];
 
+        CGFloat size=[[ZBCacheManager sharedInstance]getFileSizeWithPath:self.imagePath];
         //fileUnitWithSize 转换单位方法
-        cell.detailTextLabel.text=[NSString stringWithFormat:@"%.2fM(%@)",cacheSize,[[ZBCacheManager sharedInstance] fileUnitWithSize:size]];
+        cell.detailTextLabel.text=[NSString stringWithFormat:@"%@",[[ZBCacheManager sharedInstance] fileUnitWithSize:size]];
         cell.accessoryType=UITableViewCellAccessoryDisclosureIndicator;
     }
     

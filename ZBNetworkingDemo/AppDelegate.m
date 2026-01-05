@@ -7,9 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "CustomTabBarController.h"
-#import "ZBNetworking.h"
-#import "RequestTool.h"
+
 @interface AppDelegate ()
 
 @end
@@ -19,25 +17,6 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
-    
-    NSString *cachePath = [[ZBCacheManager sharedInstance]ZBAppCachePath];
-    NSLog(@"cachePath = %@",cachePath);
-
-    
-    #pragma mark -  公共配置 RequestTool
-    /**
-     证书设置
-     公共配置
-     插件机制
-     */
-    [[RequestTool sharedInstance] setupPublicParameters]; //设置在所有请求前 一般放在AppDelegate 中调用
-    
-    CustomTabBarController *tabbar = [[CustomTabBarController alloc]init];
-    
-    self.window.rootViewController = tabbar;
-    
-    [self.window makeKeyAndVisible];
 
     return YES;
 }
